@@ -1,0 +1,120 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,800);
+
+html {
+  font-family: Lato, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #2e2e2e;
+  margin: 0;
+  padding: 0;
+}
+
+.circle-container {
+  position: absolute;
+  z-index: 3;
+  top: -75px;
+  left: -75px;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background-color: #ff7979;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  transition: transform 0.5s ease-in-out;
+}
+
+.circle button {
+  color: white;
+  font-size: 1.5em;
+  width: 75px;
+  height: 75px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.container {
+  background-color: white;
+  transform-origin: top left;
+  padding: 50px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.content {
+  max-width: 1000px;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.content img {
+  width: 100%;
+  height: auto;
+}
+
+.content p {
+  text-align: justify;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  line-height: 1.5em;
+}
+
+.content small {
+  font-style: italic;
+}
+
+.content h2 {
+  margin-bottom: 5px;
+}
+
+nav {
+  position: absolute;
+  z-index: 3;
+  bottom: 40px;
+  transform: translateX(-150%);
+  transition: transform 0.6s ease-out;
+}
+
+nav ul {
+  list-style: none;
+}
+
+ul li {
+  margin: 0.8rem 0px;
+}
+
+ul li + li {
+  margin-left: 10px;
+}
+
+ul li + li + li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav span {
+  display: inline-block;
+  width: 1.5rem;
+  text-align: right;
+}
+
+p::selection {
+  background-color: rgb(255, 238, 0);
+}
